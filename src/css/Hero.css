@@ -1,0 +1,156 @@
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* LEFT */
+
+main .main-left {
+    width: 75%;
+    height: 100%;
+    background-color: rgba(158, 206, 211, 0.397);
+}
+
+.main-left h2 {
+    font-family: "Inria Serif";
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.menu-icon {
+    position: fixed;
+    left: 25px;
+    top: 25px;
+    width: fit-content;
+    height: fit-content;
+    padding: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.418);
+    border-radius: 12px;
+}
+
+.menu-icon svg {
+    cursor: pointer;
+}
+
+.hero-group {
+    width: 478px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin: 0 auto;
+    margin-top: 9rem;
+    background-color: rgba(179, 197, 199, 0.397);
+    padding: 20px 25px;
+    border-radius: 20px;
+    position: absolute;
+    top: 0%;
+    left: 30%;
+}
+
+.hero-group h2 {
+    font-family: "Inria Serif";
+    font-size: 3rem;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+.hero-group a {
+    margin-left: calc(478px - 184.91px - 25px);
+}
+
+.experience {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.experience h3 {
+    font-family: "Paprika";
+    font-style: normal;
+    font-size: 3rem;
+}
+
+.experience p {
+    width: 240px;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.projects-worked {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.projects-worked h3 {
+    font-family: "Paprika";
+    font-style: normal;
+    font-size: 3rem;
+}
+
+.projects-worked p {
+    width: 210px;
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+
+
+/* RIGHT */
+
+main .main-right {
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(rgb(182, 204, 245) 0.48%, rgb(213, 227, 241) 100%);
+    position: relative;
+}
+
+main img {
+    position: absolute;
+    width: 22rem;
+    left: 65%;
+    bottom: 0;
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+    .hero-group {
+        width: 100vw;
+        top: 18%;
+        left: 0%;
+    }
+
+    .hero-group a {
+        margin-left: calc(100vw - 184.91px - 25px);
+    }
+
+    main img {
+        position: absolute;
+        width: 13rem;
+        left: calc((100vw - 13rem)/2);
+        top: 0;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+    .hero-group {
+        width: 500px;
+        top: 18%;
+        left: calc((100vw - 500px)/2);
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .hero-group {
+        width: 500px;
+        top: 22%;
+        left: calc((100vw - 500px)/2);
+    }
+}

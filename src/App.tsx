@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
+import Services from "./components/Services";
+import Skills from "./components/Skills";
+import Testimonial from "./components/Testimonial";
+import { documentTitle } from "./data/data";
+import { PortfolioContextProvider } from "./utilities/contextAPI";
 
 function App() {
+  useEffect(() => {
+    document.title = documentTitle;
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PortfolioContextProvider>
+      <Navbar />
+      <Hero />
+      <Skills />
+      <Services />
+      <Projects />
+      <Testimonial />
+      <Footer />
+    </PortfolioContextProvider>
   );
 }
 

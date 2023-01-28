@@ -1,0 +1,60 @@
+nav {
+    width: fit-content;
+    height: fit-content;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    background-color: rgba(150, 169, 194, 0.6);
+    border-radius: 50px;
+    position: fixed;
+    bottom: 10px;
+    left: calc((100vw - 550.84px)/2);
+    backdrop-filter: blur(12px);
+    z-index: 4000;
+}
+
+nav a {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px;
+    transition: 400ms;
+    color: black;
+    text-decoration: none;
+}
+
+
+nav a.active {
+    background-color: rgb(6, 34, 63);
+    border-radius: 20px;
+    color: white;
+}
+
+nav a.active a {
+    color: white;
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+    nav {
+        width: 100%;
+        padding: 12px 18px;
+        gap: 0.4rem;
+        bottom: 10px;
+        left: 0px;
+        justify-content: space-evenly;
+    }
+
+    nav a {
+        gap: 6px;
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    nav a span {
+        font-size: 12px;
+    }
+}
